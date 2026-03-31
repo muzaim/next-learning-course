@@ -3,63 +3,70 @@ import React from "react";
 const Hero = () => {
 	return (
 		<>
-			<div className="bg-[#FFF2E1]  overflow-hidden">
-				<div className="px-4  lg:pb-0 lg:px-0">
-					<div className="grid grid-cols-12 lg:gap-3 container mx-auto">
-						<div className="col-span-12 lg:col-span-6 order-2 lg:order-2 mx-auto">
-							<img src="/assets/img/header-pic.svg" />
+			<section className="overflow-hidden bg-[linear-gradient(135deg,#FFF2E1_0%,#FFF8EE_45%,#F4FBFF_100%)] px-4 pb-16 pt-6 lg:px-8 lg:pt-8">
+				<div className="w-full">
+					<div className="grid grid-cols-12 items-center lg:gap-8">
+						<div className="order-2 col-span-12 mx-auto pt-6 lg:order-2 lg:col-span-6 lg:mr-0 lg:self-end lg:pt-14">
+							<img
+								src="/assets/img/header-pic.svg"
+								className="w-full max-w-[760px] lg:ml-auto"
+							/>
 						</div>
-						<div className="col-span-12 lg:col-span-6 order-1 lg:order-1 lg:my-auto ">
-							<h1 className="text-4xl font-bold text-custom-dark-blue font-poppins leading-normal mt-5 text-center md:text-5xl md:mt-10 lg:text-start lg:px-0 lg:text-[54px] lg:leading-snug">
-								<span className=" text-custom-orange">
-									Studying{" "}
-								</span>
-								Online is now much easier
+						<div className="order-1 col-span-12 lg:order-1 lg:col-span-6 lg:my-auto lg:pl-6 xl:pl-12">
+							<div className="inline-flex rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#23BDEE] shadow-sm">
+								Modern platform for online learning
+							</div>
+							<h1 className="mt-5 text-center font-poppins text-4xl font-bold leading-normal text-custom-dark-blue md:mt-8 md:text-5xl lg:px-0 lg:text-start lg:text-[58px] lg:leading-[1.15]">
+								<span className="text-custom-orange">
+									Build
+								</span>{" "}
+								a learning experience people actually want to
+								finish
 							</h1>
-							<p className="text-[16px] text-[#464646] text-center px-10 my-4 md:text-xl md:px-52 lg:text-start lg:px-0 lg:my-10 lg:text-[24px] lg:pr-10">
-								Skilline is an interesting platform that will
-								teach you in more an interactive way
+							<p className="my-4 px-4 text-center text-[16px] text-[#464646] md:px-24 md:text-xl lg:my-8 lg:px-0 lg:pr-10 lg:text-start lg:text-[22px] lg:leading-9">
+								Skilline helps course creators, mentors, and
+								education teams build online classes that feel
+								structured, interactive, and easy to follow from
+								anywhere.
 							</p>
-							<div className="flex justify-center items-center md:mt-5 lg:justify-start">
-								<button className="px-5 py-3 rounded-full font-poppins text-white font-semibold bg-custom-orange md:px-8 md:py-4 md:text-lg">
-									Join for free
+							<div className="flex flex-col justify-center gap-4 sm:flex-row sm:items-center md:mt-5 lg:justify-start">
+								<button className="rounded-full bg-custom-orange px-6 py-4 font-poppins font-semibold text-white shadow-lg shadow-orange-200 md:px-8 md:text-lg">
+									Launch Your Course
 								</button>
-								<button className="px-5 py-3 rounded-full font-poppins text-custom-dark-blue font-semibold md:px-8 md:py-4 md:text-lg">
-									How its work
+								<button className="rounded-full bg-white px-6 py-4 font-poppins font-semibold text-custom-dark-blue md:px-8 md:text-lg">
+									See Learning Flow
 								</button>
+							</div>
+							<div className="mt-8 grid gap-4 text-center sm:grid-cols-3 lg:text-start">
+								<div>
+									<p className="text-3xl font-bold text-custom-dark-blue">
+										120+
+									</p>
+									<p className="mt-1 text-sm text-[#696984]">
+										Active classes
+									</p>
+								</div>
+								<div>
+									<p className="text-3xl font-bold text-custom-dark-blue">
+										35k
+									</p>
+									<p className="mt-1 text-sm text-[#696984]">
+										Learners reached
+									</p>
+								</div>
+								<div>
+									<p className="text-3xl font-bold text-custom-dark-blue">
+										4.9/5
+									</p>
+									<p className="mt-1 text-sm text-[#696984]">
+										Average satisfaction
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div className="mt-[100px] mb-[160px] px-4 ">
-				<h1 className="text-center font-poppins text-lg  text-[#696984] mb-5 md:text-2xl lg:mb-5 lg:text-4xl lg:my-20">
-					Trusted by 5,000+ Companies Worldwide
-				</h1>
-				<div className="flex gap-5 w-[20rem] md:gap-10 flex-wrap justify-center items-center md:w-[40rem] mx-auto md:mt-10 lg:w-auto">
-					<img src="/assets/img/netfilx.svg" className="h-6 md:h-8" />
-					<img
-						src="/assets/img/amazon.svg"
-						className="h-6 md:h-8 lg:h-12"
-					/>
-					<img
-						src="/assets/img/airbnb.svg"
-						className="h-6 md:h-8 lg:h-12"
-					/>
-					<img
-						src="/assets/img/google.svg"
-						className="h-6 md:h-8 lg:h-12"
-					/>
-					<img
-						src="/assets/img/grab.svg"
-						className="h-6 md:h-8 lg:h-12"
-					/>
-					<img
-						src="/assets/img/facebook.svg"
-						className="h-6 md:h-8 lg:h-12"
-					/>
-				</div>
-			</div>
+			</section>
 		</>
 	);
 };

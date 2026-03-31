@@ -1,66 +1,60 @@
 import React from "react";
 
+const cards = [
+	{
+		image: "/assets/img/excel.svg",
+		title: "Course Management",
+		description:
+			"Organize lessons, assignments, quizzes, and feedback in one clear workflow.",
+	},
+	{
+		image: "/assets/img/calendar.svg",
+		title: "Live Class Scheduling",
+		description:
+			"Schedule live classes, mentoring sessions, and reminders without overwhelming learners.",
+	},
+	{
+		image: "/assets/img/people.svg",
+		title: "Community Support",
+		description:
+			"Create active learner discussions that keep every class engaging and collaborative.",
+	},
+];
+
 const AllInOne = () => {
 	return (
-		<div className="px-4 ">
+		<section className="px-4 py-8">
 			<div>
-				<h1 className="text-custom-dark-blue text-center text-xl mb-2 font-poppins font-bold md:text-2xl lg:text-4xl lg:mt-20">
+				<h1 className="mb-2 text-center font-poppins text-xl font-bold text-custom-dark-blue md:text-2xl lg:mt-20 lg:text-4xl">
 					All-In-One{" "}
 					<span className="text-custom-orange">Cloud Software.</span>
 				</h1>
-				<p className="text-center text-[#696984] font-poppins px-5 md:text-lg lg:text-2xl md:w-[32rem] md:mb-20 lg:mt-5 lg:w-[45rem] mx-auto">
-					Skilline is one powerful online software suite that combines
-					all the tools needed to run a successful school or office.
+				<p className="mx-auto px-5 text-center font-poppins text-[#696984] md:mb-20 md:w-[32rem] md:text-lg lg:mt-5 lg:w-[45rem] lg:text-2xl">
+					Skilline brings together the core tools a modern learning
+					platform needs, from course management to a more personal
+					student experience.
 				</p>
 			</div>
-			<div className="mt-10 flex flex-col lg:flex-row gap-20 items-center justify-center lg:container lg:mx-auto lg:mt-[103px]">
-				<div className="w-[23rem] lg:w-auto rounded-2xl shadow-lg border text-center pb-10">
-					<img
-						src="/assets/img/excel.svg"
-						className="h-32 mx-auto -mt-[54px] md:h-36 md:-mt-[62px] lg:h-40 lg:-mt-[72px]"
-					/>
-					<h1 className="text-custom-dark-blue text-lg font-semibold leading-relaxed font-poppins md:text-xl lg:text-2xl">
-						Online Billing,
-						<br /> Invoicing, & Contracts
-					</h1>
-					<p className="px-5 mt-3 text-[#696984] font-poppins pb-5 font-extralight md:text-lg lg:text-xl lg:px-14">
-						Simple and secure control of your organization’s
-						financial and legal transactions. Send customized
-						invoices and contracts
-					</p>
-				</div>
-				<div className="w-[23rem] lg:w-auto rounded-2xl shadow-lg border text-center pb-10">
-					<img
-						src="/assets/img/calendar.svg"
-						className="h-32 mx-auto -mt-[54px] md:h-36 md:-mt-[62px] lg:h-40 lg:-mt-[72px]"
-					/>
-					<h1 className="text-custom-dark-blue text-lg font-semibold leading-relaxed font-poppins md:text-xl lg:text-2xl">
-						Online Billing,
-						<br /> Invoicing, & Contracts
-					</h1>
-					<p className="px-5 mt-3 text-[#696984] font-poppins pb-5 font-extralight md:text-lg lg:text-xl lg:px-14">
-						Simple and secure control of your organization’s
-						financial and legal transactions. Send customized
-						invoices and contracts
-					</p>
-				</div>
-				<div className="w-[23rem] lg:w-auto rounded-2xl shadow-lg border text-center pb-10">
-					<img
-						src="/assets/img/people.svg"
-						className="h-32 mx-auto -mt-[54px] md:h-36 md:-mt-[62px] lg:h-40 lg:-mt-[72px]"
-					/>
-					<h1 className="text-custom-dark-blue text-lg font-semibold leading-relaxed font-poppins md:text-xl lg:text-2xl">
-						Online Billing,
-						<br /> Invoicing, & Contracts
-					</h1>
-					<p className="px-5 mt-3 text-[#696984] font-poppins pb-5 font-extralight md:text-lg lg:text-xl lg:px-14">
-						Simple and secure control of your organization’s
-						financial and legal transactions. Send customized
-						invoices and contracts
-					</p>
-				</div>
+			<div className="mt-10 grid items-center justify-center gap-20 lg:container lg:mx-auto lg:mt-[103px] lg:grid-cols-3 lg:gap-8">
+				{cards.map((card) => (
+					<div
+						key={card.title}
+						className="w-[23rem] rounded-[30px] border border-[#F1F5FD] bg-white pb-10 text-center shadow-[0_28px_60px_rgba(47,50,125,0.08)] lg:w-auto"
+					>
+						<img
+							src={card.image}
+							className="mx-auto -mt-[54px] h-32 md:-mt-[62px] md:h-36 lg:-mt-[72px] lg:h-40"
+						/>
+						<h1 className="font-poppins text-lg font-semibold leading-relaxed text-custom-dark-blue md:text-xl lg:text-2xl">
+							{card.title}
+						</h1>
+						<p className="mt-3 px-5 pb-5 font-poppins text-[#696984] md:text-lg lg:px-14 lg:text-xl">
+							{card.description}
+						</p>
+					</div>
+				))}
 			</div>
-		</div>
+		</section>
 	);
 };
 

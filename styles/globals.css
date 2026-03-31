@@ -4,3 +4,26 @@
 
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		@apply bg-[#fffdf8] text-slate-900 font-poppins;
+		background-image:
+			radial-gradient(circle at top left, rgba(255, 221, 170, 0.28), transparent 32%),
+			radial-gradient(circle at bottom right, rgba(101, 218, 255, 0.18), transparent 28%),
+			linear-gradient(180deg, rgba(255, 250, 244, 0.92), rgba(255, 255, 255, 0.96));
+		min-height: 100vh;
+	}
+
+	* {
+		@apply box-border;
+	}
+
+	::selection {
+		background: rgba(244, 140, 6, 0.25);
+	}
+}
